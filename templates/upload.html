@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detection des Malwares</title>
+    <link rel="stylesheet" href="static/styleraw.css">
+    <style>
+        .footer-text{
+            background-color: rgb(97, 97, 97);
+            position: absolute;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="logo"><a href="#"><img src="static/logoFST.png" alt="Logo"></a></li>
+            <div class="nav-items">
+                <li><a href="{{ url_for('upload_file') }}">Accueil</a></li>
+                <li><a href="{{ url_for('documentation') }}">Documentation</a></li>
+                <li><a href="{{ url_for('about') }}">A propos</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </div>
+            <li class="login"><a href="#"><img src="{{ url_for('static', filename='login-icon.png') }}" alt="Login"></a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Télécharger un fichier</h1>
+        <form method="post" enctype="multipart/form-data">
+            <input type="file" name="executable_file">
+            <input type="submit" id="butt" value="Charger">
+        </form>
+    </div>
+    <footer>
+        <p>"La seule façon de faire du bon travail est d'aimer ce que l'on fait. Si vous ne l'avez pas encore trouvé,continuez à chercher." - Steve Jobs</p>
+        
+        <div class="footer-text">
+            <br><br>
+            <p class="x">PFE 2024/2025</p>
+            <p class="x">Encadré par : MR ELBERMI LAHCEN</p>
+            <p class="x">Réalisé par : DODO TAHIROU ABDOUL SALAM  & ELBOUBKRAOUI FARID</p>
+
+            <br><br>
+        </div>
+    </footer>
+</body>
+</html>
